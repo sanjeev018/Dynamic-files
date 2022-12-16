@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.top{ 
+    display: flex;
+    justify-content:center;
+}
+
+.middle{ 
+    display: flex;
+    justify-content:center;
+    margin-top: 2em;
+}
+
+.middle button{ 
+    padding: .5em 2.5em .5em 2.5em;
+    background-color:yellow;
+    border-radius: 1em;
+}
+
+.bottom{ 
+    display: flex;
+    justify-content:center;
+    line-height: .8em;
+    margin-top: 3em;
+}
+.top input{ 
+    background-color: skyblue;
+    border-radius: 1em;
+}
+    </style>
+
+    
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic practice</title>
+</head>
+<body>
+<div class="top"> 
+<input id="inptChange" type="text" placeholder="Enter your name"> 
+<input id="inptMail" type="email" placeholder="Enter your Mail"> 
+<input id="inptId"  type="password" placeholder="Enter your password"> <br><br> <br>
+</div>
+
+<div class="middle"> 
+<button onclick="changeName(), inptmil(), inptIl()"> CLICK</button>
+</div>
+
+<div class="bottom"> 
+    <div>
+<h2 id="root">Name</h2> 
+<h2 id="rootMail">email</h2>
+<h2 id="rootId">password</h2> 
+</div>
+</div> 
+
+    <script> 
+    function changeName(){ 
+        let val= document.getElementById("inptChange").value
+
+        let a= document.getElementById("root").innerText= val
+        document.getElementById("root").style.color="red"
+        console.log(a)
+    }
+
+    function inptmil(){ 
+        let val= document.getElementById("inptMail").value
+
+let a= document.getElementById("rootMail").innerText=val
+document.getElementById("rootMail").style.color="yellow"
+console.log(a)
+}
+    
+
+function inptIl(){ 
+        let val= document.getElementById("inptId").value
+
+let a= document.getElementById("rootId").innerText=val
+document.getElementById("rootId").style.color="skyblue"
+console.log(a)
+}
+        
+    </script> 
+</body>
+</html>
